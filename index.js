@@ -1,28 +1,27 @@
+// ./index.js
+
 // 1. IMPORTACIONES
 
 const express		= require("express")
 const app			= express()
-
-const hbs			= require("hbs")
-
 const connectDB		= require("./config/db")
-
+const cors			= require("cors")
 
 // 2. MIDDLEWARES
 require("dotenv").config()
-
 connectDB()
 
-app.use(express.static("public"))
-app.set("views", __dirname + "/views")
-app.set("view engine", "hbs")
+app.use(cors())
 
-app.use(express.urlencoded({ extended: true }))
-
+app.use(express.json({extended: true}))
 
 // 3. RUTEO
-app.use("/", require("./routes/index"))
 
+
+//app.use("/api/profile", require ("./routes/profile"))
+app.use("/api/users", require("./routes/users"))
+//app.use("/api/diary", require("./routes/diary"))
+app.use("/", require("./routes/index"))
 
 
 // 4. SERVIDOR
