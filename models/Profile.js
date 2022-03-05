@@ -23,9 +23,6 @@ const ProfileSchema = mongoose.Schema({
 	goals: {
 		type: String
 	},
-	needs: {
-		type: String
-	}
 
 })
 

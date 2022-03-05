@@ -20,8 +20,10 @@ app.use(express.json({extended: true}))
 
 //app.use("/api/profile", require ("./routes/profile"))
 app.use("/api/users", require("./routes/users"))
-//app.use("/api/diary", require("./routes/diary"))
+app.use("/api/diary", require("./routes/diary"))
+app.use("/api/profile", require("./routes/profile"))
 app.use("/", require("./routes/index"))
+
 
 
 // 4. SERVIDOR
