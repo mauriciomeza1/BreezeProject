@@ -17,24 +17,9 @@ exports.getProfile = async (req, res) => {
 exports.createProfile = async (req, res) => {
 	
 	// FORMULARIO
-	const { 
-        age,
-        pronouns,
-        description,
-        about,
-        problems,
-        needs,
-        goals
-     } = req.body
+	const { age, pronouns, about, needs, goals } = req.body
 
-	const newProfile	= await Profile.create({
-        age,
-        pronouns,
-        description,
-        about,
-        problems,
-        needs,
-        goals
+	const newProfile	= await Profile.create({ age, pronouns, about, needs, goals
     })
 
 	res.json({

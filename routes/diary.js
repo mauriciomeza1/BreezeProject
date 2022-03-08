@@ -10,8 +10,8 @@ const diaryController = require("./../controllers/diaryController")
 
 //router.get ("/all", diaryController.diary)
 //router.get("/new", diaryController.newDiary)
-router.post("/create", diaryController.createDiaries)
 router.get("/", diaryController.getDiaries)
+router.post("/create", diaryController.createDiary)
 //router.get("/", diaryController.getDiaries)
 
 //router.get("/:id", diaryController.getSingleDiary)

@@ -24,12 +24,12 @@ exports.getDiaries = async (req, res) => {
 		data: allDiaries
 	})
 
-}
+} 
 
-exports.createDiaries = async (req, res) => {
+exports.createDiary = async (req, res) => {
 	
 	// FORMULARIO
-	const { markdown} = req.body
+	const { markdown } = req.body
 
 	const newDiary	= await Diary.create({markdown})
 

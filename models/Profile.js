@@ -8,13 +8,7 @@ const ProfileSchema = mongoose.Schema({
 	pronouns: {
 		type: String
 	},
-	description: {
-		type: String
-	},
 	about: {
-		type: String
-	},
-	problems: {
 		type: String
 	},
 	needs: {
