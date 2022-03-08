@@ -9,8 +9,7 @@ exports.create = async (req, res) => {
 
 
 	const { 
-		name, 
-		lastname, 
+		name,  
 		email, 
 		password } = req.body
 
@@ -25,7 +24,6 @@ exports.create = async (req, res) => {
 			// 2. CREACIÓN DEL USUARIO
 			const newUser = await User.create({
 				name,
-				lastname,
 				email,
 				password: hashedPassword
 			})

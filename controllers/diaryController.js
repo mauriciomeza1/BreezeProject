@@ -20,7 +20,7 @@ exports.getDiaries = async (req, res) => {
 	const allDiaries = await Diary.find({})
 
 	res.json({
-		msg: "Se ha obtenido con éxito el listado de mascotas",
+		msg: "Se ha obtenido con éxito el listado de entradas",
 		data: allDiaries
 	})
 
@@ -29,12 +29,12 @@ exports.getDiaries = async (req, res) => {
 exports.createDiaries = async (req, res) => {
 	
 	// FORMULARIO
-	const { markdown, mood } = req.body
+	const { markdown} = req.body
 
-	const newDiary	= await Diary.create({markdown, mood})
+	const newDiary	= await Diary.create({markdown})
 
 	res.json({
-		msg: "Se ha creado una mascota correctamente",
+		msg: "Se ha creado una entrada correctamente",
 		data: newDiary
 	})
 	

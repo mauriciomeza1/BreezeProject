@@ -19,7 +19,7 @@ exports.createProfile = async (req, res) => {
 	// FORMULARIO
 	const { 
         age,
-        gender,
+        pronouns,
         description,
         about,
         problems,
@@ -29,7 +29,7 @@ exports.createProfile = async (req, res) => {
 
 	const newProfile	= await Profile.create({
         age,
-        gender,
+        pronouns,
         description,
         about,
         problems,

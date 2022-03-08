@@ -5,7 +5,7 @@ const ProfileSchema = mongoose.Schema({
 	age: {
 		type: String
 	},
-	gender: {
+	pronouns: {
 		type: String
 	},
 	description: {
