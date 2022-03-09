@@ -44,88 +44,88 @@ exports.createDiary = async (req, res) => {
 
 
 
-/*
-exports.newDiaryForm = async (req, res) => {
 
-	const { markdown, mood} = req.body
+// exports.newDiaryForm = async (req, res) => {
 
-	console.log(req.body)
+// 	const { markdown} = req.body
 
-
-	const newDiary = await Diary.create({ markdown, mood})
-
-	console.log(newDiary)
-
-	res.redirect("/diaries/all")
-
-}
-
-exports.getSingleDiary = async (req, res) => {
-
-	try {
-
-		const { id } = req.params
-		const singleDiary = await Diary.findById(id)
-		return res.render("diaries/details", {
-			singleDiary
-		})
+// 	console.log(req.body)
 
 
-	} catch (error) {
+// 	const newDiary = await Diary.create({ markdown})
+
+// 	console.log(newDiary)
+
+// 	res.redirect("/diaries/all")
+
+// }
+
+// exports.getSingleDiary = async (req, res) => {
+
+// 	try {
+
+// 		const { id } = req.params
+// 		const singleDiary = await Diary.findById(id)
+// 		return res.render("diaries/details", {
+// 			singleDiary
+// 		})
+
+
+// 	} catch (error) {
 		
-		console.log(error)
-		return res.render(`/diaries`, {
-			errorMsg: "Hubo un problema en la muestra de los detalles."
-		})
+// 		console.log(error)
+// 		return res.render(`/diaries`, {
+// 			errorMsg: "Hubo un problema en la muestra de los detalles."
+// 		})
 
-	}
-}
-
-
-exports.deleteDiary = async (req, res) => {
-
-	const { id } = req.params
-
-	try {
-		const deletedDiary = await Diary.findByIdAndRemove(id)
-		res.redirect("/diaries/all")
-
-	} catch (error) {
-		console.log(error)
-		res.render(`diaries/${id}`)
-
-	}
-}
+// 	}
+// }
 
 
+// exports.deleteDiary = async (req, res) => {
 
-exports.editDiary = async (req, res) => {
+// 	const { id } = req.params
 
-	const { id } = req.params
+// 	try {
+// 		const deletedDiary = await Diary.findByIdAndRemove(id)
+// 		res.redirect("/diaries/all")
 
-	const singleDiary = await Diary.findById(id)
+// 	} catch (error) {
+// 		console.log(error)
+// 		res.render(`diaries/${id}`)
 
-	res.render("diaries/edit", {
-		singleDiary
-	})
-
-
-}
-
-
-exports.editDiaryForm = async (req, res) => {
-
-	const { markdown, mood } = req.body
-
-	const { id } = req.params
-
-	await Diary.findByIdAndUpdate(
-		id,
-		{ markdown, mood },
-		{ new: true }
-	)
-
-	res.redirect(`/diaries/${id}`)
+// 	}
+// }
 
 
-}*/
+
+// exports.editDiary = async (req, res) => {
+
+// 	const { id } = req.params
+
+// 	const singleDiary = await Diary.findById(id)
+
+// 	res.render("diaries/edit", {
+// 		singleDiary
+// 	})
+
+
+// }
+
+
+// exports.editDiaryForm = async (req, res) => {
+
+// 	const { markdown } = req.body
+
+// 	const { id } = req.params
+
+// 	await Diary.findByIdAndUpdate(
+// 		id,
+// 		{ markdown },
+// 		{ new: true }
+// 	)
+
+// 	res.redirect(`/diaries/${id}`)
+
+
+// }

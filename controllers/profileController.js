@@ -7,11 +7,11 @@ const Profile			= require("./../models/Profile")
 exports.getProfile = async (req, res) => {
 
 	const theProfile = await Profile.find({})
-
 	res.json({
 		msg: "Se ha obtenido con éxito el perfil",
 		data: theProfile
 	})
+
 }
 
 exports.createProfile = async (req, res) => {
